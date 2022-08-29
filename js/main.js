@@ -5,24 +5,6 @@ const MUSIC_LIST = [
       "name": "Faded",
       "artist": "Alan Walker",
       "music": "./music/fade.mp3"
-  },
-  {
-      "img": "./images/Lily.png",
-      "name": "Lily",
-      "artist": "Alan Walker",
-      "music": "./musics/Lily.mp3"
-  },
-  {
-      "img": "./images/TheNights.jpeg",
-      "name": "The Night",
-      "artist": "Avicii (Cover by AngieN.)",
-      "music": "./musics/TheNights.mp3"
-  },
-  {
-      "img": "./images/VuHoiHoaTrang.jpeg",
-      "name": "假面舞会",
-      "artist": "很美味",
-      "music": "./musics/VuHoiHoaTrang.mp3"
   }
 ]
 
@@ -65,7 +47,7 @@ function loadTrack(trackIndex) {
 
   updateTimer = setInterval(setUpdate, 1000);
 
-  currentTrack.addEventListener('ended', getNextTrack);
+  currentTrack.addEventListener('ended', repeatTrack);
   randomBackgroundColor();
 }
 
