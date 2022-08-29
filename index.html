@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music player</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="player">
+    <div class="wrapper">
+      <div class="details">
+        <div class="now-playing"></div>
+        <div class="track-art"></div>
+        <div class="track-name"></div>
+        <div class="track-artist"></div>
+      </div>
+
+      <div class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+      </div>
+
+      <div class="slider_container">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="10" class="volume_slider" onchange="setVolume()">
+        <i class="fa fa-volume-up"></i>
+      </div>
+
+      <div class="buttons">
+
+        <div class="playpause-track" onclick="playOrPauseTrack()">
+          <i class="fa fa-play-circle fa-3x"></i>
+        </div>
+
+      </div>
+
+      <div class="wave">
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+        <div class="stroke"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
